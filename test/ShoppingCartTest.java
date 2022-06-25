@@ -5,9 +5,9 @@ import org.junit.Test;
 public class ShoppingCartTest {
 
 	@Test
-	public void carrinhoVazioQuandoCriado() {
+	public void carrinhoNovoPossuiZeroItens() {
 		ShoppingCart cart = new ShoppingCart();
-		assertEquals(0, cart.getItemCount(), 0.000000001d);
+		assertEquals(0, cart.getItemCount());
 	}
 
 }
