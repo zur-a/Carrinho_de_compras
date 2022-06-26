@@ -17,6 +17,14 @@ public class ShoppingCartTest {
 		cart.addItem(new Product("Nintendo 3DSXL", 179.99));
 		cart.empty();
 		assertEquals(0, cart.getItemCount());
+	}		
+	
+	@Test
+	public void totalDeDoisItensNoCarrinho() {
+		ShoppingCart cart = new ShoppingCart();
+		cart.addItem(new Product("Nintendo 3DS", 129.99));
+		cart.addItem(new Product("Nintendo Switch", 179.99));
+		assertEquals(2, cart.getItemCount());
 	}
 
 }
