@@ -60,5 +60,12 @@ public class ShoppingCartTest {
 		cart.removeItem(product3);
 		assertEquals(1, cart.getItemCount());
 	}
+	
+	@Test(expected=ProductNotFoundException.class)
+	public void remocaoDeProdutoInexistenteNoCarrinho() throws ProductNotFoundException {
+		setup();
+		cart.addItem(product1);
+		cart.removeItem(product2);
+	}
 
 }
