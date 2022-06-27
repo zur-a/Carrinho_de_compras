@@ -3,21 +3,17 @@ public class Parser {
 	
 	public static int toInteger(String string) {
 		int i = 0;
-		
+			
 		try 
 		{
-			i = Integer.parseInt(string);
+			i = Short.parseShort(string);
 		} 
 		catch(NumberFormatException e) 
 		{
-			return 0;
+			throw e;
 		}
 		
-		return i;
+		return Integer.parseInt(string);
 	}
-	
-	//private void check(String string) {
-		
-	//}
 
 }
